@@ -1,0 +1,118 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+@layer base {
+  :root {
+    --font-display: 'Barlow Condensed', system-ui, sans-serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-sans);
+    background-color: #070b12;
+    color: #e2e8f0;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono-tabular {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.leaflet-container {
+  background-color: #070b12 !important;
+  font-family: var(--font-sans);
+}
+
+.leaflet-container .leaflet-tile {
+  mix-blend-mode: normal !important;
+  backface-visibility: hidden;
+}
+
+.leaflet-container canvas.leaflet-tile {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Precision Tactical Range Fader */
+input[type="range"].tac-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 18px;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type="range"].tac-slider:focus {
+  outline: none;
+}
+
+input[type="range"].tac-slider::-webkit-slider-runnable-track {
+  height: 4px;
+  background: #172233;
+  border: 1px solid #27374f;
+  border-radius: 2px;
+}
+
+input[type="range"].tac-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 16px;
+  margin-top: -7px;
+  background: var(--slider-accent, #38bdf8);
+  border: 1px solid #070b12;
+  border-radius: 2px;
+  transition: transform 0.1s ease, filter 0.12s ease;
+}
+
+input[type="range"].tac-slider:hover::-webkit-slider-thumb {
+  filter: brightness(1.15);
+  transform: scaleY(1.08);
+}
+
+input[type="range"].tac-slider::-moz-range-track {
+  height: 4px;
+  background: #172233;
+  border: 1px solid #27374f;
+  border-radius: 2px;
+}
+
+input[type="range"].tac-slider::-moz-range-thumb {
+  width: 12px;
+  height: 16px;
+  background: var(--slider-accent, #38bdf8);
+  border: 1px solid #070b12;
+  border-radius: 2px;
+}
+
+/* Sleek Tactical Scrollbar */
+.tac-scroll::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.tac-scroll::-webkit-scrollbar-track {
+  background: #080d16;
+}
+
+.tac-scroll::-webkit-scrollbar-thumb {
+  background: #1e2c42;
+  border-radius: 2px;
+}
+
+.tac-scroll::-webkit-scrollbar-thumb:hover {
+  background: #2f4363;
+}

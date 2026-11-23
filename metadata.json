@@ -1,0 +1,8 @@
+{
+  "name": "Remix Skyline Bastion",
+  "description": "2D tactical air-defense game defending a coastal skyline against hostile drones and incoming missiles.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
